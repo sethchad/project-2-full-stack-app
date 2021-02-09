@@ -21,3 +21,8 @@ Sequelize
 - npx sequelize seed:generate --name demo-tasks
 - npx sequelize seed:generate --name demo-users
 - npx sequelize seed:generate --name demo-groups
+    * add initial data to task, user, and group seed files
+- npx sequelize db:migrate
+    * create the database tables
+- npx sequelize db:seed:all
+    * seed the db tables with intial data
