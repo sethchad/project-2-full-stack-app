@@ -7,3 +7,5 @@
 - npm install ejs
 - npm install method-override
 - npm install nodemon -g
+- npm install sequelize-cli sequelize pg
+- npx sequelize init
