@@ -1,6 +1,6 @@
 'use strict';
 
-const { BelongsToMany } = require("sequelize/types");
+// const { BelongsToMany } = require("sequelize/types");
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -8,73 +8,73 @@ module.exports = {
       "Users",
       [
         {
-          nameFirst: Mike,
-          nameLast: Brady,
-          username: mike,
-          password: mikeb,
-          groupId: null,
-        },
-        {
-          nameFirst: Carol,
-          nameLast: Brady,
-          username: carol,
-          password: carol,
+          nameFirst: "Mike",
+          nameLast: "Brady",
+          username: "mike",
+          password: "mikeb",
           groupId: null
         },
         {
-          nameFirst: Marcia,
-          nameLast: Brady,
-          username: marcia,
-          password: marcia,
+          nameFirst: "Carol",
+          nameLast: "Brady",
+          username: "carol",
+          password: "carol",
           groupId: null
         },
         {
-          nameFirst: Jan,
-          nameLast: Brady,
-          username: jan,
-          password: jan,
+          nameFirst: "Marcia",
+          nameLast: "Brady",
+          username: "marcia",
+          password: "marcia",
           groupId: null
         },
         {
-          nameFirst: Cindy,
-          nameLast: Brady,
-          username: cindy,
-          password: cindy,
+          nameFirst: "Jan",
+          nameLast: "Brady",
+          username: "jan",
+          password: "jan",
           groupId: null
         },
         {
-          nameFirst: Greg,
-          nameLast: Brady,
-          username: greg,
-          password: greg,
+          nameFirst: "Cindy",
+          nameLast: "Brady",
+          username: "cindy",
+          password: "cindy",
           groupId: null
         },
         {
-          nameFirst: Peter,
-          nameLast: Brady,
-          username: peter,
-          password: peter,
+          nameFirst: "Greg",
+          nameLast: "Brady",
+          username: "greg",
+          password: "greg",
           groupId: null
         },
         {
-          nameFirst: Bobby,
-          nameLast: Brady,
-          username: bobby,
-          password: bobby,
+          nameFirst: "Peter",
+          nameLast: "Brady",
+          username: "peter",
+          password: "peter",
           groupId: null
         },
         {
-          nameFirst: Alice,
-          nameLast: Nelson,
-          username: alice,
-          password: alice,
+          nameFirst: "Bobby",
+          nameLast: "Brady",
+          username: "bobby",
+          password: "bobby",
           groupId: null
         },
         {
-          nameFirst: Tom, 
-          nameLast: Brady,
-          username: bestqbever,
-          password: superbowl,
+          nameFirst: "Alice",
+          nameLast: "Nelson",
+          username: "alice",
+          password: "alice",
+          groupId: null
+        },
+        {
+          nameFirst: "Tom", 
+          nameLast: "Brady",
+          username: "bestqbever",
+          password: "superbowl",
           groupId: null
         },
       ],

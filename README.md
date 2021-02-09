@@ -26,3 +26,4 @@ Sequelize
     * create the database tables
 - npx sequelize db:seed:all
     * seed the db tables with intial data
+    * To back out migrations and seeding--> npx sequelize db:migrate:undo:all
