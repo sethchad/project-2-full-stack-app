@@ -22,8 +22,6 @@ Sequelize
 - npx sequelize seed:generate --name demo-users
 - npx sequelize seed:generate --name demo-groups
     * add initial data to task, user, and group seed files
-- npx sequelize db:migrate
-    * create the database tables
-- npx sequelize db:seed:all
-    * seed the db tables with intial data
+- npx sequelize db:migrate && npx sequelize db:seed:all
+    * create the database tables and seed with intial data
     * To back out migrations and seeding--> npx sequelize db:migrate:undo:all

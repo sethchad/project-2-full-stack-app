@@ -77,6 +77,19 @@ module.exports = {
           password: "superbowl",
           groupId: null
         },
+        {
+          nameFirst: "Peyton", 
+          nameLast: "Manning",
+          username: "retired",
+          password: "takiniteasy",
+          groupId: null
+        },
+        {
+          nameFirst: "Drew", 
+          nameLast: "Brees",
+          username: "gosaints",
+          password: "gopurdue",
+        },
       ],
       {}
     );

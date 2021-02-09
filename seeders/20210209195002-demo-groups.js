@@ -6,10 +6,10 @@ module.exports = {
       "Groups",
       [
         {
-          name: "Ladies"
+          name: "Brady Ladies"
         },
         {
-          name: "Gentleman"
+          name: "Brady Gentleman"
         },
         {
           name: "Quarterbacks"
