@@ -26,6 +26,24 @@ router.post('/', (req, res) => {
 	})
 });
 
+// EDIT
+router.get('/:id/edit', (req, res) => {
+  Task.findByPk(req.params.id).then((task) => {
+    res.render('edit.ejs', {
+      task: task,
+    });
+  })
+});
+
+router.put('/:id', (req, res) => {
+  Task.update(req.body, {
+    where: { id: req.params.id },
+    returning: true,
+  }).then(() => { 
+    res.redirect('/tasks');
+  });
+});
+
 // SHOW
 router.get('/:id', (req, res) => {
   Task.findByPk(req.params.id).then((task) => {

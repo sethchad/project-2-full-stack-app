@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Edit</title>
+        <link rel="stylesheet" href="/css/app.css">
+    </head>
+    <body>
+        <h1>Edit Task Page</h1>
+        <!--  NOTE: action will be the route, method will be the HTTP verb-->
+        <form action="/tasks/<%= task.id %>?_method=PUT" method="POST">
+            Task: <input type="text" name="name" value="<%= task.name %>"><br/>
+            Frequency: <input type="integer" name="frequency" value=<%= task.frequency %>><br/>
+            <input type="submit" name="" value="Update Task"/>
+        </form>
+    </body>
+</html>
