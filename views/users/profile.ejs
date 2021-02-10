@@ -34,9 +34,13 @@
     </br>
     <a href="/tasks">View All Tasks</a>
 
-    <h3>Tasks Assigned to You:</h3>
+    <h3>Tasks Added By You:</h3>
     <ul>
-        loop for tasks
+        <% for (let i=0; i< user.Tasks.length; i++){ %>
+        <li>
+            <a href="/tasks/<%=user.Tasks[i].id%>"><%=user.Tasks[i].name%></a>
+        </li>
+        <% } %>
     </ul>
     
 </body>

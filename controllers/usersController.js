@@ -10,7 +10,7 @@ router.get('/profile/:id', (req, res) => {
 	User.findByPk(
 		req.params.id, {
 			include: [
-				// { model: Task }, 
+				{ model: Task }, 
 				{ model: Group },
 			],
 		}).then((user) => {

@@ -13,6 +13,8 @@
         
         <h3>Frequency: <%= task.frequency %> Days</h3>
 
+        <h3>Added by <%= task.User.username %></h3>
+
         <!-- DELETE FORM -->
         <form action="/tasks/<%= task.id %>?_method=DELETE" method="POST">
             <input type="submit" value="DELETE FOREVER"/>

@@ -11,84 +11,85 @@ module.exports = {
           nameFirst: "Mike",
           nameLast: "Brady",
           username: "mike",
-          password: "mikeb",
-          groupId: null
+          password: "mike",
+          groupId: 2
         },
         {
           nameFirst: "Carol",
           nameLast: "Brady",
           username: "carol",
           password: "carol",
-          groupId: null
+          groupId: 1
         },
         {
           nameFirst: "Marcia",
           nameLast: "Brady",
           username: "marcia",
           password: "marcia",
-          groupId: null
+          groupId: 1
         },
         {
           nameFirst: "Jan",
           nameLast: "Brady",
           username: "jan",
           password: "jan",
-          groupId: null
+          groupId: 1
         },
         {
           nameFirst: "Cindy",
           nameLast: "Brady",
           username: "cindy",
           password: "cindy",
-          groupId: null
+          groupId: 1
         },
         {
           nameFirst: "Greg",
           nameLast: "Brady",
           username: "greg",
           password: "greg",
-          groupId: null
+          groupId: 2
         },
         {
           nameFirst: "Peter",
           nameLast: "Brady",
           username: "peter",
           password: "peter",
-          groupId: null
+          groupId: 2
         },
         {
           nameFirst: "Bobby",
           nameLast: "Brady",
           username: "bobby",
           password: "bobby",
-          groupId: null
+          groupId: 2
         },
         {
           nameFirst: "Alice",
           nameLast: "Nelson",
           username: "alice",
           password: "alice",
-          groupId: null
+          groupId: 1
         },
         {
           nameFirst: "Tom", 
           nameLast: "Brady",
           username: "bestqbever",
           password: "superbowl",
-          groupId: null
+          groupId: 3
         },
         {
           nameFirst: "Peyton", 
           nameLast: "Manning",
           username: "retired",
           password: "takiniteasy",
-          groupId: null
+          groupId: 3
         },
         {
           nameFirst: "Drew", 
           nameLast: "Brees",
           username: "gosaints",
           password: "gopurdue",
+          groupId: 3
         },
       ],
       {}

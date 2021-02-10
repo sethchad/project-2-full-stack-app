@@ -46,7 +46,9 @@ router.put('/:id', (req, res) => {
 
 // SHOW
 router.get('/:id', (req, res) => {
-  Task.findByPk(req.params.id).then((task) => {
+  Task.findByPk(req.params.id, {
+    include: [User]
+  }).then((task) => {
     res.render('show.ejs', {
       task: task
     });
