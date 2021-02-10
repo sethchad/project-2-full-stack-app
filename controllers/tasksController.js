@@ -26,6 +26,15 @@ router.post('/', (req, res) => {
 	})
 });
 
+// SHOW
+router.get('/:id', (req, res) => {
+  Task.findByPk(req.params.id).then((task) => {
+    res.render('show.ejs', {
+      task: task
+    });
+  })
+});
+
 // DELETE route
 router.delete('/:id', (req, res) => {
 	Task.destroy({ where: {id: req.params.id} }).then(() => {
