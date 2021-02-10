@@ -16,4 +16,23 @@ router.get('/login', (req, res) => {
 });
 
 
+// POST LOGIN
+router.post('/login', (req, res) => {
+  User.findOne({
+    where: {
+      username: req.body.username,
+      password: req.body.password,
+    }
+  }).then((foundUser) => {
+    res.redirect(`/users/profile/${foundUser.id}`);
+  })
+});
+
+// POST - CREATE NEW USER FROM SIGNUP FORM
+router.post('/', (req, res) => {
+  User.create(req.body).then((newUser) => {
+    res.redirect(`/users/profile/${newUser.id}`);
+  });
+});
+
 module.exports = router;

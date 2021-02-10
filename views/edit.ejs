@@ -6,12 +6,22 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
+        <a href="/tasks">Return to Task List</a>
+        </br>
+
         <h1>Edit Task Page</h1>
+        
         <!--  NOTE: action will be the route, method will be the HTTP verb-->
         <form action="/tasks/<%= task.id %>?_method=PUT" method="POST">
-            Task: <input type="text" name="name" value="<%= task.name %>"><br/>
+            Task: <input type="text" name="name" value="<%= task.name %>"><br/><br/>
             Frequency: <input type="integer" name="frequency" value=<%= task.frequency %>><br/>
+            </br>
             <input type="submit" name="" value="Update Task"/>
+        </form>
+        </br>  
+        <!-- DELETE FORM -->
+        <form action="/tasks/<%= task.id; %>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE FOREVER">
         </form>
     </body>
 </html>

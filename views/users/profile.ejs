@@ -7,27 +7,22 @@
     <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
-    <h1>Welcome <%=user.name%></h1>
+    <h1>Welcome <%=user.username%></h1>
 
-    <!--
-    <h3><%=user.Family.name%> Family Members</h3>
-    <ul>
-        <% for (let i = 0; i < user.Family.length; i++){ %>
-            <li>
-              <%=user.Family[i].name%></a>
-            </li>
-            <% } %>
-    </ul>
-    -->
+    <h3> Group Members</h3>
+    list of group members 
+    </br></br>
 
     <form action="/users/profile/<%=user.id%>?_method=PUT" method="POST">
-        Name: <input type="text" name="name" value=<%= user.name %> /><br/>
+        First Name: <input type="text" name="nameFirst" value="<%= user.nameFirst %>" /><br/>
         <br/>
-        Username: <input type="text" name="username" value=<%= user.username %> ><br/>
+        Last Name: <input type="text" name="nameLast" value="<%= user.nameLast %>" /><br/>
         <br/>
-        Password: <input type="text" name="password" value=<%= user.password %> ><br/>
+        Username: <input type="text" name="username" value="<%= user.username %>" ><br/>
         <br/>
-        Family Number: <input type="integer" name="family" value=<%= family.id %> ></br>
+        Password: <input type="text" name="password" value="<%= user.password %>" ><br/>
+        <br/>
+        Group Id: <input type="integer" name="groupId" value="<%= user.groupId %>" ></br>
         </br>
         <input type="submit" name="" value="Edit Profile"/>
     </form>

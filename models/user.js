@@ -11,6 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       User.belongsTo(models.Group, {foreignKey: 'groupId'});
+      // User.belongsTo(models.Task, { 
+      //   through: "UserTask",
+      //   foreignKey: 'userId',
+      //   otherKey: 'taskId',
+      // });
     }
   };
   User.init({

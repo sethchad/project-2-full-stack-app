@@ -13,9 +13,14 @@
         
         <h3>Frequency: <%= task.frequency %> Days</h3>
 
+        <!-- DELETE FORM -->
         <form action="/tasks/<%= task.id %>?_method=DELETE" method="POST">
-            <input type="submit" value="DELETE"/>
+            <input type="submit" value="DELETE FOREVER"/>
         </form>
+        </br>
+
+        <!-- EDIT LINK -->
+        <a href="/tasks/<%= task.id; %>/edit">Edit</a>
 
         <!--<script src="../server.js" async defer></script>-->
     </body>
