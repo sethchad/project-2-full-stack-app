@@ -9,7 +9,8 @@
 <body>
     <h1>Welcome <%=user.username%></h1>
 
-    <h3> Group Members</h3>
+    <h3>Group Name: <%= user.Group.name %></h3>
+    <p>Group Id: <%=user.Group.id%></p>
     list of group members 
     </br></br>
 
@@ -31,7 +32,7 @@
         <input type="submit" value="Delete User">
     </form>
     </br>
-    <a href="/task">View All Tasks</a>
+    <a href="/tasks">View All Tasks</a>
 
     <h3>Tasks Assigned to You:</h3>
     <ul>

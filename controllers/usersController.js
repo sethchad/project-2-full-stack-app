@@ -7,11 +7,13 @@ const Group = require('../models').Group;
 
 // GET USER PROFILE
 router.get('/profile/:id', (req, res) => {
-    User.findByPk(
-         req.params.id, //{
-    //   include: [{ model: Task }, { model: Group }],
-    // }
-    ).then((user) => {
+	User.findByPk(
+		req.params.id, {
+			include: [
+				// { model: Task }, 
+				{ model: Group },
+			],
+		}).then((user) => {
     //   Team.findAll().then((group) => {
     //     res.render('users/profile.ejs', { user, group });
     //   });
