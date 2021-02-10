@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Index</title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+    <h1>Task Index Page</h1>
+    <a href="/tasks/new">Add a task</a>
+    <nav>
+        <ul>
+            <% tasks.forEach((task, id) => { %>
+                <li>
+                    <a href="/tasks/<%= task.id %>"><%= task.name %></a>
+
+                    <!-- DELETE FORM -->
+                    
+                    <form action="/tasks/<%= task.id; %>?_method=DELETE" method="POST">
+                        <input type="submit" value="Complete">
+                    </form>
+
+                    <!-- EDIT LINK -->
+                    <a href="/tasks/<%= task.id; %>/edit">Edit</a>
+                    </br></br>
+                </li>
+            <% }) %>
+
+        </ul>
+    </nav>
+</body>
+</html>
