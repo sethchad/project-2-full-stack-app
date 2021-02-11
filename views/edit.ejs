@@ -13,9 +13,14 @@
         
         <!--  NOTE: action will be the route, method will be the HTTP verb-->
         <form action="/tasks/<%= task.id %>?_method=PUT" method="POST">
-            Task: <input type="text" name="name" value="<%= task.name %>"><br/><br/>
-            Frequency: <input type="integer" name="frequency" value=<%= task.frequency %>><br/>
-            </br>
+            Task: <input type="text" name="name" value="<%= task.name %>">
+            </br></br>
+            Created By (User Id):<%= task.createdByUserId %>
+            </br></br>
+            Assigned To (User Id): <input type="integer" name="assignedToUserId" value="<%=task.assignedToUserId%>">
+            </br></br>
+            Frequency: <input type="integer" name="frequency" value="<%= task.frequency %>">
+            </br></br>
             <input type="submit" name="" value="Update Task"/>
         </form>
         </br>  

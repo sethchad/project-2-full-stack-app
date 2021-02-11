@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   UserTask.init({
-    userId: DataTypes.INTEGER,
+    assignedUserId: DataTypes.INTEGER,
     taskId: DataTypes.INTEGER
   }, {
     sequelize,

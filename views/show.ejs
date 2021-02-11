@@ -10,10 +10,13 @@
     </head>
     <body>
         <h1><%= task.name %></h1>
-        
-        <h3>Frequency: <%= task.frequency %> Days</h3>
 
-        <h3>Added by <%= task.User.username %></h3>
+        <h3>Added by: <%= task.User.username %></h3>
+
+        <h3>Assigned to (User Id): <%= task.assignedToUserId%> </h3>
+
+        <h3>Frequency: <%= task.frequency %> Days</h3>
+        
 
         <!-- DELETE FORM -->
         <form action="/tasks/<%= task.id %>?_method=DELETE" method="POST">

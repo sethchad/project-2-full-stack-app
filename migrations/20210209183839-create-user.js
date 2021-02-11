@@ -23,7 +23,8 @@ module.exports = {
         type: Sequelize.STRING
       },
       groupId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        defaultValue: 1
       },
       createdAt: {
         allowNull: false,

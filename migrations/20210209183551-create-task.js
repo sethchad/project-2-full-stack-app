@@ -15,8 +15,12 @@ module.exports = {
       frequency: {
         type: Sequelize.INTEGER
       },
-      userId: {
-        type: Sequelize.INTEGER
+      createdByUserId: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+      },
+      assignedToUserId: {
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,

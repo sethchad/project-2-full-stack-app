@@ -6,6 +6,9 @@ module.exports = {
       "Groups",
       [
         {
+          name: "Unassigned"
+        },
+        {
           name: "Brady Ladies"
         },
         {

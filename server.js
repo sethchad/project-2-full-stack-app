@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
@@ -21,6 +22,6 @@ app.get('/', (req, res) => {
     res.render('users/index.ejs')
 })
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
     console.log("I'm listening");
 });

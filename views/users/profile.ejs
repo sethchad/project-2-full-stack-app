@@ -11,7 +11,7 @@
 
     <h3>Group Name: <%= user.Group.name %></h3>
     <p>Group Id: <%=user.Group.id%></p>
-    list of group members 
+    
     </br></br>
 
     <form action="/users/profile/<%=user.id%>?_method=PUT" method="POST">
@@ -28,7 +28,7 @@
         <input type="submit" name="" value="Edit Profile"/>
     </form>
     <br/>
-    <form action='/users/<%=user.id%>?_method=DELETE' method=POST>
+    <form action='/users/profile/<%=user.id%>?_method=DELETE' method=POST>
         <input type="submit" value="Delete User">
     </form>
     </br>

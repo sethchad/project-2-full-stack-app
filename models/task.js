@@ -10,18 +10,21 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Task.belongsTo(models.User, { foreignKey: 'userId' })
-      // Task.belongsTo(models.User, { 
-      //   through: "UserTask",
+      Task.belongsTo(models.User, { foreignKey: 'createdByUserId' });
+      // Task.belongsTo(models.User, { foreignKey: 'assignedToUserId' })
+      // Task.belongsTo(models.User, { through: 'UserTask' })
+      // Task.belongsToMany(models.User, { 
+      //   through: "UserTasks",
       //   foreignKey: 'taskId',
-      //   otherKey: 'userId',
-      // });
+      //   otherKey: 'assignedUserId',
+      // }); 
     }
   };
   Task.init({
     name: DataTypes.STRING,
     frequency: DataTypes.INTEGER,
-    userId: DataTypes.INTEGER,
+    createdByUserId: DataTypes.INTEGER,
+    assignedToUserId: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'Task',
