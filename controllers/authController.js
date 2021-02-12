@@ -25,7 +25,11 @@ router.post('/login', (req, res) => {
       password: req.body.password,
     }
   }).then((foundUser) => {
-    res.redirect(`/users/profile/${foundUser.id}`);
+    if(foundUser == null) {
+      res.redirect(`/`);
+    } else {
+      res.redirect(`/users/profile/${foundUser.id}`);
+    }
   })
 });
 
