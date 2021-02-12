@@ -28,8 +28,9 @@ This full stack application keeps track of a to-do list for multiple users in di
 - Node.js
 - Express
 - EJS
+- EJS Partials
 - Sequelize
-- User Authentication (implemented, but deactivated)
+- User Authentication using bcrypt and JWT (implemented, but deactivated)
 
 ## Approach
 I wanted to create a useful app, and a to-do list (in this deployment, using household chores as the example) that multiple people have access to, where tasks can be created, assigned to someone, and completed, seemed to fill a need. In a household with more than one person, there are often chores or tasks that are added by one person, and completed by another. Having a way to track what needs to be done and by who is very useful, and also translatable to any situation with multiple users and multiple tasks. Users can also assigned to a group, in this deployment, I used the Brady Bunch family, and divided users into "Brady Ladies" and "Brady Gentleman", and a user can see which group they are assigned to and change that assignment. This is conceptually the same managing business tasks, such as multiple shifts of employees in a warehouse, and the tasks are picks that need to be completed. 

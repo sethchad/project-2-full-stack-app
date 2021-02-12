@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
+        <div class="content-wrap">
         <a href="/tasks">Return to Task List</a>
         </br>
         <h1>Task: <%= task.name %></h1>
@@ -24,6 +25,8 @@
 
         <!-- EDIT LINK -->
         <a href="/tasks/<%= task.id; %>/edit">Edit</a>
+        </div>
+        <%- include('./partials/footer') %>
 
         <!--<script src="../server.js" async defer></script>-->
     </body>

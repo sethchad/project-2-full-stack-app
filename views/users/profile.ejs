@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
+    <div class="content-wrap">
     <h1>Welcome <%=user.username%></h1>
     <p>User Id: <%=user.id%></p>
 
@@ -43,6 +44,7 @@
         </li>
         <% } %>
     </ul>
-    
+    </div>
+    <%- include('../partials/footer') %>
 </body>
 </html>
