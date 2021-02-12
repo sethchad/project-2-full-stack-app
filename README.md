@@ -8,7 +8,7 @@ This full stack application keeps track of a to-do list for multiple users in di
 - [Deployed Site](https://seth-chadwick-task-app.herokuapp.com/)
 
 ## Wireframe
-![Wireframe of Task App]()
+![Wireframe of Task App](https://github.com/sethchad/project-2-full-stack-app/blob/main/images/task_app_wireframe.jpg)
 
 ## User Stories
 1. As an unregistered user, I want to be able to create an account and see the task list.
