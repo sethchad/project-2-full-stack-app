@@ -8,6 +8,8 @@
 - npm install method-override
 - npm install nodemon -g
 - npm install dotenv
+- npm install bcryptjs
+- npm install jsonwebtoken cookie-parser
 
 Sequelize
 - npm install sequelize-cli sequelize pg
