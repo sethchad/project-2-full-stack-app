@@ -8,11 +8,10 @@
 </head>
 <body>
     <h1>Welcome <%=user.username%></h1>
+    <p>User Id: <%=user.id%></p>
 
-    <h3>Group Name: <%= user.Group.name %></h3>
-    <p>Group Id: <%=user.Group.id%></p>
-    
-    </br></br>
+    <h3>Group Name: <a href="/groups/<%= user.Group.id %>"><%= user.Group.name %></a></h3>
+    </br>
 
     <form action="/users/profile/<%=user.id%>?_method=PUT" method="POST">
         First Name: <input type="text" name="nameFirst" value="<%= user.nameFirst %>" /><br/>
@@ -33,6 +32,8 @@
     </form>
     </br>
     <a href="/tasks">View All Tasks</a>
+    </br>
+    <a href="/groups">View All Groups</a>
 
     <h3>Tasks Added By You:</h3>
     <ul>

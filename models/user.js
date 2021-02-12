@@ -12,10 +12,8 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       User.belongsTo(models.Group, { foreignKey: 'groupId' });
       User.hasMany(models.Task, { foreignKey: 'createdByUserId' });
-      // User.hasMany(models.Task, { foreignKey: 'assignedToUserId' });
-      // User.belongsToMany(models.Task, {through: 'UserTasks' });
       // User.belongsToMany(models.Task, { 
-      //   through: "UserTasks",
+      //   through: "UserTask",
       //   foreignKey: 'assignedUserId',
       //   otherKey: 'taskId',
       // });

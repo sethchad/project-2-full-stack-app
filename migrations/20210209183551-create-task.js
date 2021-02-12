@@ -19,8 +19,9 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false
       },
-      assignedToUserId: {
-        type: Sequelize.INTEGER,
+      assignedToUser: {
+        type: Sequelize.STRING,
+        defaultValue: "none"
       },
       createdAt: {
         allowNull: false,

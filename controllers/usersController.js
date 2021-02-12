@@ -16,22 +16,25 @@ router.get('/profile/:id', (req, res) => {
 				//{ model: UserTask },
 			],
 		}).then((user) => {
-    //   Team.findAll().then((group) => {
-    //     res.render('users/profile.ejs', { user, group });
-    //   });
         res.render('users/profile.ejs', { user });
     });
   });
 
 // EDIT PROFILE
 router.put("/profile/:id", (req, res) => {
-	User.update(req.body, {
-		where: { id: req.params.id },
-		returning: true,
-	}).then(() => {
-		res.redirect(`/users/profile/${req.params.id}`);
+	Group.findAll().then((groups) => {
+		let numGroups = groups.length;
+		
+		if (req.body.groupId > numGroups) { req.body.groupId = 1 }
+
+		User.update(req.body, {
+			where: { id: req.params.id },
+			returning: true,
+		}).then(() => {
+			res.redirect(`/users/profile/${req.params.id}`);
+		});
 	});
-});
+})
 
 // DELETE USER
 router.delete("/profile/:id", (req, res) => {

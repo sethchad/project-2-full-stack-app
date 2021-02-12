@@ -11,10 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Task.belongsTo(models.User, { foreignKey: 'createdByUserId' });
-      // Task.belongsTo(models.User, { foreignKey: 'assignedToUserId' })
-      // Task.belongsTo(models.User, { through: 'UserTask' })
       // Task.belongsToMany(models.User, { 
-      //   through: "UserTasks",
+      //   through: "UserTask",
       //   foreignKey: 'taskId',
       //   otherKey: 'assignedUserId',
       // }); 
@@ -24,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     frequency: DataTypes.INTEGER,
     createdByUserId: DataTypes.INTEGER,
-    assignedToUserId: DataTypes.INTEGER,
+    assignedToUser: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'Task',

@@ -26,7 +26,14 @@ module.exports = {
         type: Sequelize.DATE,
         defaultValue: new Date()
       }
-    });
+    },
+    { 
+      uniqueKeys: {
+        actions_unique: {
+          fields: ["assignedUserId", "taskId"]
+        },
+      }
+    },);
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('UserTasks');

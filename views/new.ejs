@@ -6,12 +6,17 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
+        <a href="/tasks">Return to Task List</a>
+        </br>
         <h1>New Task Page</h1>
         <!--  NOTE: action will be the route, method will be the HTTP verb-->
         <form action="/tasks" method="POST">
-            Name: <input type="text" name="name" /><br/>
-            Frequency: <input type="integer" name="frequency" /><br/>
-            User Id: <input type="integer" name="createdByUserId" /></br>
+            Task: <input type="text" name="name" />
+            </br></br>
+            Created By (User Id): <input type="integer" name="createdByUserId" />
+            </br></br>
+            Assigned To: <input type="string" name="assignedToUser" />
+            </br></br>
             <input type="submit" name="" value="Add Task"/>
         </form>
     </body>

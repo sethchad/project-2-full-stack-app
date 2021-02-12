@@ -28,7 +28,9 @@ router.post('/', (req, res) => {
 
 // EDIT
 router.get('/:id/edit', (req, res) => {
-  Task.findByPk(req.params.id).then((task) => {
+  Task.findByPk(req.params.id, {
+    include: [User]
+  }).then((task) => {
     res.render('edit.ejs', {
       task: task,
     });

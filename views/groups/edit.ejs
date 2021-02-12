@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Edit</title>
+        <link rel="stylesheet" href="/css/app.css">
+    </head>
+    <body>
+        <a href="/groups">Group List</a>
+        </br>
+
+        <h1>Edit Group</h1>
+        
+        <form action="/groups/<%= group.id %>?_method=PUT" method="POST">
+            Group Name: <input type="text" name="name" value="<%= group.name %>">
+            </br></br>
+            <input type="submit" name="" value="Update Group Name"/>
+        </form>
+        </br>  
+        <!-- DELETE FORM -->
+        <form action="/groups/<%= group.id; %>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE GROUP">
+        </form>
+    </body>
+</html>

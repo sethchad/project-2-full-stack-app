@@ -14,6 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 // Controllers and Routes
 app.use('/tasks', require('./controllers/tasksController.js'));
 app.use('/users', require('./controllers/usersController.js'));
+app.use('/groups', require('./controllers/groupsController.js'));
 app.use('/auth', require('./controllers/authController.js'));
 
 

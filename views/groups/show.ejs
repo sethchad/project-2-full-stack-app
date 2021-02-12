@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Group Details</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/app.css">
+    </head>
+    <body>
+        <a href="/tasks">Task List</a>
+        </br></br>
+        <a href="/groups">Group List</a>
+        </br>
+        <h1>Group Name: <%= group.name %></h1>
+        <p>Group Id: <%= group.id %></p>
+        
+        <ul>
+            <% for (i = 0; i < group.Users.length; i++) { %>
+                <li>
+                    <h3><%= group.Users[i].nameFirst %> <%= group.Users[i].nameLast %></h3>
+                    <p>
+                        Username: <%= group.Users[i].username %>
+                    </br>
+                        User Id: <%= group.Users[i].id %>
+                    </p>
+                </li>
+            <% } %>   
+        </ul>
+        
+    </body>
+</html>
