@@ -20,6 +20,22 @@ router.get('/profile/:id', (req, res) => {
     });
   });
 
+// // GET USER PROFILE WITH AUTHENITCATION
+// router.get('/profile/:id', (req, res) => {
+// 	if (req.user.id == req.params.id) {
+// 		User.findByPk(
+// 			req.params.id, {
+// 				include: [
+// 					{ model: Task }, 
+// 					{ model: Group },
+// 					//{ model: UserTask },
+// 				],
+// 			}).then((user) => {
+// 			res.render('users/profile.ejs', { user });
+// 		});
+// 	}
+// });
+
 // EDIT PROFILE
 router.put("/profile/:id", (req, res) => {
 	Group.findAll().then((groups) => {

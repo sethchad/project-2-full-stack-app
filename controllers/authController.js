@@ -41,7 +41,7 @@ router.post('/', (req, res) => {
   });
 });
 
-// // POST LOGIN
+// // POST LOGIN WITH AUTHENTICATION 
 // router.post("/login", (req, res) => {
 //   User.findOne({
 //     where: {
@@ -73,7 +73,7 @@ router.post('/', (req, res) => {
 // });
 
 
-// // POST - CREATE NEW USER FROM SIGNUP
+// // POST - CREATE NEW USER FROM SIGNUP WITH AUTHENTICATION
 // router.post("/", (req, res) => {
 //   bcrypt.genSalt(10, (err, salt) => {
 //     if (err) return res.status(500).json(err);
