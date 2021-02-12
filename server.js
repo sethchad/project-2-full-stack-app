@@ -34,7 +34,7 @@ const verifyToken = (req, res, next) => {
 
 // INDEX
 app.get('/', (req, res) => {
-    res.render('users/index.ejs')
+    res.redirect('/auth/login')
 })
 
 

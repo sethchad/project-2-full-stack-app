@@ -29,7 +29,7 @@ This full stack application keeps track of a to-do list for multiple users in di
 - Express
 - EJS
 - Sequelize
-- User Authentication (partially implemented)
+- User Authentication (implemented, but deactivated)
 
 ## Approach
 I wanted to create a useful app, and a to-do list (in this deployment, using household chores as the example) that multiple people have access to, where tasks can be created, assigned to someone, and completed, seemed to fill a need. In a household with more than one person, there are often chores or tasks that are added by one person, and completed by another. Having a way to track what needs to be done and by who is very useful, and also translatable to any situation with multiple users and multiple tasks. Users can also assigned to a group, in this deployment, I used the Brady Bunch family, and divided users into "Brady Ladies" and "Brady Gentleman", and a user can see which group they are assigned to and change that assignment. This is conceptually the same managing business tasks, such as multiple shifts of employees in a warehouse, and the tasks are picks that need to be completed. 
@@ -41,35 +41,4 @@ Additionally, the packages and code for JWT Authentication are in place, with si
 ```
 app.use('/users', require('./controllers/usersController.js'));
 ```
-
-
-
-- npm init
-- npm install 
-- npm install express
-- npm install ejs
-- npm install method-override
-- npm install nodemon -g
-- npm install dotenv
-- npm install bcryptjs
-- npm install jsonwebtoken cookie-parser
-
-Sequelize
-- npm install sequelize-cli sequelize pg
-- npx sequelize init
-- npx sequelize model:generate --name Task --attributes name:string,frequency:integer
-- npx sequelize model:generate --name User --attributes nameFirst:string,nameLast:string,username:string,password:string,groupId:integer
-- npx sequelize model:generate --name Group --attributes name:string
-- npx sequelize model:generate --name UserTask --attributes userId:integer,taskId:integer
-    * create model and migration files 
-    * update migration files with defaultValues for createdAt and updatedAt columns
-    * update static associations in model files 
-- npx sequelize seed:generate --name demo-tasks
-- npx sequelize seed:generate --name demo-users
-- npx sequelize seed:generate --name demo-groups
-    * add initial data to task, user, and group seed files
-- npx sequelize db:migrate && npx sequelize db:seed:all
-    * create the database tables and seed with intial data
-    * To back out migrations and seeding--> npx sequelize db:migrate:undo:all
-
 
