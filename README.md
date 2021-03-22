@@ -37,9 +37,5 @@ I wanted to create a useful app, and a to-do list (in this deployment, using hou
 
 While a user can easily see what tasks they added to the list (on their profile page), I ran into difficulty in the join table that links users to assigned tasks. While the join table is separate from the User or Task tables, the association overrode the data of who created the task, so I was able to see one but not the other. The migration and model to generate the UserTasks join table are still in the code, but the associtations in the User and Task model have been commented out. 
 
-Additionally, the packages and code for JWT Authentication are in place, with signup and login routes running through the authController, and authenticated routes and JWT tokens. These have been tested and do work, but have been commented out for ease of demonstration of app functionality since I would not be able to use sequelize seeder files for adding users. These can be activated by commenting out the non-authenticated routes in the authController and usersController, and replacing the users controller route in the server.js file with the following line of code: 
-
-```
-app.use('/users', require('./controllers/usersController.js'));
-```
+Additionally, the packages and code for JWT Authentication are in place, with signup and login routes running through the authController, and authenticated routes and JWT tokens. These have been tested and do work, but have been commented out for ease of demonstrating app functionality in class, since I would not have been able to use sequelize seeder files for adding users. 
 
